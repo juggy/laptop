@@ -21,6 +21,8 @@ echo "Installing Postgres, a good open source relational database ..."
 
 echo "Installing Redis, a good key-value database ..."
   brew install redis
+  cp /usr/local/Cellar/redis/2.2.12/io.redis.redis-server.plist ~/Library/LaunchAgents/
+  launchctl load -w ~/Library/LaunchAgents/io.redis.redis-server.plist 
 
 echo "Installing ack, a good way to search through files ..."
   brew install ack
